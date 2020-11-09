@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useRef} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import GoToMyAccount from './GoToMyAccount.js';
+import Carusel from './Carusel.js'
 
 
 
@@ -10,7 +11,7 @@ export default function App() {
     <View style={styles.container}>
       
       <GoToMyAccount />
-      <StatusBar style="auto" />
+      <Carusel />
     </View>
   );
 }
