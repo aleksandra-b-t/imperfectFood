@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import {SafeAreaView, ScrollView, StyleSheet, View, ImageBackground, Animated, useWindowDimensions, Text} from "react-native";
+import {SafeAreaView, ScrollView, StyleSheet, View, ImageBackground, Animated, useWindowDimensions, Text, TouchableOpacity} from "react-native";
 
-// const images = {
-// pic1: `https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568152022/website-assets/ValueCarousel3.png`, 
-// pic2: `https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568850603/website-assets/MobileValueProp1ImageNew.png`,
-// pic3: `https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568312015/website-assets/ValueCarousel2.png`};
-const images = new Array(3).fill('https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568152022/website-assets/ValueCarousel3.png', 'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568850603/website-assets/MobileValueProp1ImageNew.png');
+const images = [
+'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568152022/website-assets/ValueCarousel3.png', 
+'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568850603/website-assets/MobileValueProp1ImageNew.png',
+'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568312015/website-assets/ValueCarousel2.png'
+];
+// const images = new Array(3).fill('https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568152022/website-assets/ValueCarousel3.png', 'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568850603/website-assets/MobileValueProp1ImageNew.png');
 
 const Carusel = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -14,12 +15,13 @@ const Carusel = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.scrollContainer}>
+      <TouchableOpacity style={styles.scrollContainer}>
         <ScrollView
           horizontal={true}
           style={styles.scrollViewStyle}
-          pagingEnabled
           showsHorizontalScrollIndicator={false}
+          flexDirection='row'
+          flexWrap='wrap'
           onScroll={Animated.event([
             {
               nativeEvent: {
@@ -29,7 +31,7 @@ const Carusel = () => {
               }
             }
           ])}
-          scrollEventThrottle={1}
+        //   scrollEventThrottle={1}
         >
           {images.map((image, imageIndex) => {
             return (
@@ -67,7 +69,7 @@ const Carusel = () => {
             );
           })}
         </View>
-      </View>
+      </TouchableOpacity>
       <View style={styles.lineContainer}>
         <Text style={styles.line}> ↑ GOOD FOR YOU AND YOURS. ↑</Text>
       </View>
