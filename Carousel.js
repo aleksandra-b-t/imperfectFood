@@ -46,14 +46,14 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flexDirection: 'row',
       resizeMode: "stretch",
-      height: 'auto',
+      height: '10%',
     },
     carousel: {
         
     },  
     card: {
         flex: 1,
-        height: 800,
+        height: '100%',
         marginVertical: 4,
         marginHorizontal: 16,
         overflow: "hidden",

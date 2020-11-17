@@ -11,11 +11,13 @@ import TouchableBar from './TouchableBar.js'
 export default function App() {
   return (
     <View style={styles.container}>
-      
+      {/* <NavBar/> */}
       <GoToMyAccount />
       <TouchableBar text="Imperfect Food's response to COVID-19" color='green' />
-      {/* <Carousels /> */}
-      {/* <NavBar/> */}
+      <Carousels />
+      <TouchableBar text="↑ GOOD FOR YOU AND YOURS. ↑" color="purple" />
+      <TouchableBar text="↓ GOOD FOR THE PLANET. ↓" color="green" />
+      
     </View>
   );
 }
