@@ -3,7 +3,7 @@ import { ImageBackground, Text, View, StyleSheet, Button, Image} from 'react-nat
 import Carousel from 'react-native-carousel-control';
 
 
-export class Carousel extends Component {
+export class Carousels extends Component {
     images = [
         'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568152022/website-assets/ValueCarousel3.png', 
         'https://res.cloudinary.com/imperfect/image/upload/h_600,f_auto,fl_lossy,q_auto/v1568850603/website-assets/MobileValueProp1ImageNew.png',
@@ -42,7 +42,11 @@ export class Carousel extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      paddingTop: 100,
+      paddingTop: 0,
+      justifyContent: 'center',
+      flexDirection: 'row',
+      resizeMode: "stretch",
+      height: 'auto',
     },
     carousel: {
         
@@ -58,4 +62,4 @@ const styles = StyleSheet.create({
       },
   });
 
-export default Carousel;
+export default Carousels;

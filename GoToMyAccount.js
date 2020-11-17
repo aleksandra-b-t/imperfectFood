@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import ButtonWithBackground from './ButtonWithBackground.js'
 import { StyleSheet, Text, View, Image, ImageBackground, Button, Alert, TouchableHighlight } from 'react-native';
 
 export default function GoToMyAccount() {
@@ -9,55 +10,31 @@ export default function GoToMyAccount() {
         style={styles.pic}
         source={{uri: 'https://res.cloudinary.com/imperfect/image/upload/q_auto:best,f_auto,dpr_auto,w_auto/v1601919017/website-assets/ABTasty%20website%20test%20assets/Asset_4_2x.png',
       }}> 
-      <View style={styles.buttonContainer}>
-        <TouchableHighlight style={styles.acc}>
-          <Text
-              color='#EF5859'
-              height='90px'
-              width='190px'
-              onPress={() => Alert.alert('You are reditected to tour account')}
-             >"Go To My Account" </Text>  
-           </TouchableHighlight>
-        </View> 
+        <View style={styles.buttonContainer}>
+          <ButtonWithBackground text='Go To My Accout' color='coral'/>
+        </View>
       </ImageBackground>
-      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   viewContainer: {
-    // display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    height: '40%',
-    // width: '100%',
+    height: '55%',
     resizeMode: "stretch",
-    // alignItems: 'center'
   },
   pic: {
     width: 'null',
     height: 'auto',
-    // resizeMode: "stretch",
-    // flexDirection: 'row',
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'stretch',
   },
   buttonContainer: {
-    // backgroundColor: null,
-    // justifyContent: 'center',
-    // flexDirection: 'row',
-    // alignItems: 'center',
     position: 'absolute',
-    bottom: 20,
+    bottom: 17,
     right: '40%',
     alignSelf: 'center' ,
     padding: 0,
-   },
-  acc: {
-    // height: 90,
-    // width: 190,
-    borderRadius: 50,
-    
-  },
+   }
 });
