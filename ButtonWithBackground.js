@@ -14,14 +14,14 @@ const ButtonWithBackground = props => {
 
 const styles = StyleSheet.create({
     button: {
-        padding: 16,
-        width: 300,
+        padding: 10,
+        width: '100%',
         borderRadius: 24,
         alignItems: 'center'
     },
     text: {
         color: 'white',
-        fontSize: 20
+        fontSize: 10
     }
 })
 

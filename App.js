@@ -3,7 +3,8 @@ import React, {useRef} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import GoToMyAccount from './GoToMyAccount.js';
 import Carousels from './Carousel.js'
-import Test from './Test.js'
+import NavBar from './NavBar.js'
+import TouchableBar from './TouchableBar.js'
 
 
 
@@ -12,8 +13,9 @@ export default function App() {
     <View style={styles.container}>
       
       <GoToMyAccount />
-      <Carousels />
-      {/* <Test/> */}
+      <TouchableBar text="Imperfect Food's response to COVID-19" color='green' />
+      {/* <Carousels /> */}
+      {/* <NavBar/> */}
     </View>
   );
 }

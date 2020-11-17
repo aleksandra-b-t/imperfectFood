@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   viewContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    height: '55%',
+    height: '30%',
     resizeMode: "stretch",
   },
   pic: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     position: 'absolute',
     bottom: 17,
-    right: '40%',
+    right: '33%',
     alignSelf: 'center' ,
     padding: 0,
    }
