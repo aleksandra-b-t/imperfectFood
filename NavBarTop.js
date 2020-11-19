@@ -1,5 +1,7 @@
-import React, { Component } from 'react-native'
-import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav'
+import React from 'react';
+import React, { Component, Settings } from 'react-native';
+
+
 
 export default function NavBarTop() {
     return (

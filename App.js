@@ -7,11 +7,11 @@ import ImageWithTopic from './ImageWithTopic.js'
 
 
 
+
 export default function App() {
   return (
     
       <View style={styles.container}>
-        {/* <NavBarTop/> */}
         {/* <GoToMyAccount />
         <TouchableBar text="Imperfect Food's response to COVID-19" color='green' />
         <Carousels />
@@ -23,11 +23,9 @@ export default function App() {
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
     display: 'flex',
     width: '100%',
     height: '100%',
