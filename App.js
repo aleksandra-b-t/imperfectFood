@@ -1,35 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {useRef} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import GoToMyAccount from './GoToMyAccount.js';
 import Carousels from './Carousel.js'
-import NavBar from './NavBar.js'
 import TouchableBar from './TouchableBar.js'
+import ImageWithTopic from './ImageWithTopic.js'
 
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <NavBar/> */}
-      <GoToMyAccount />
-      <TouchableBar text="Imperfect Food's response to COVID-19" color='green' />
-      <Carousels />
-      <TouchableBar text="↑ GOOD FOR YOU AND YOURS. ↑" color="purple" />
-      <TouchableBar text="↓ GOOD FOR THE PLANET. ↓" color="green" />
-      
-    </View>
+    
+      <View style={styles.container}>
+        {/* <NavBarTop/> */}
+        {/* <GoToMyAccount />
+        <TouchableBar text="Imperfect Food's response to COVID-19" color='green' />
+        <Carousels />
+        <TouchableBar text="↑ GOOD FOR YOU AND YOURS. ↑" color="purple" /> */}
+        <TouchableBar text="↓ GOOD FOR THE PLANET. ↓" color="green" />
+        <ImageWithTopic url={'https://res.cloudinary.com/imperfect/image/upload/h_800,f_auto,fl_lossy,q_auto/v1569292112/website-assets/DesktopItemsWeLoveImage.png'} topic='jakis topic'/>
+      </View>
+   
   );
 }
 
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     // backgroundColor: '#fff',
     display: 'flex',
-    width: '100vw',
-    height: '100vh',
+    width: '100%',
+    height: '100%',
 
   },
 });

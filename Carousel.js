@@ -14,8 +14,8 @@ export class Carousels extends Component {
         return (
             <View style={styles.container}>
                 <Carousel
-                    sliderWidth={300}
-                    itemWidth={300}
+                    sliderWidth={350}
+                    itemWidth={'auto'}
                     autoplay={true}
                     loop={true}
                     >
